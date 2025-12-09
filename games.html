@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - MyWebsite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">Peliluola</div>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="games">
+            <div class="container">
+                <h1>Play Games</h1>
+                
+                <!-- Number Guessing Game -->
+                <div class="game-container">
+                    <div class="game-card">
+                        <h3>Guess the number</h3>
+                        <p>Guess the number between 1 and 100</p>
+                        <div class="game-content">
+                            <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+                            <button onclick="submitGuess()" class="game-button">Submit Guess</button>
+                            <p id="guessMessage" class="game-message"></p>
+                            <p id="attemptsDisplay" class="attempts"></p>
+                            <button onclick="resetGuessGame()" class="game-button secondary">New Game</button>
+                        </div>
+                    </div>
+
+                    <!-- Memory Match Game -->
+                    <div class="game-card">
+                        <h3>Memory Match Game</h3>
+                        <p>Match pairs of cards</p>
+                        <div class="game-content">
+                            <div id="memoryBoard" class="memory-board"></div>
+                            <p id="matchMessage" class="game-message"></p>
+                            <button onclick="resetMemoryGame()" class="game-button">New Game</button>
+                        </div>
+                    </div>
+
+                    <!-- Speed Click Game -->
+                    <div class="game-card">
+                        <h3>Speed Click Game</h3>
+                        <p>Click 10 boxes as fast as you can!</p>
+                        <div class="game-content">
+                            <div id="speedGameArea" class="speed-game-area">
+                                <div id="speedClickBox" class="speed-click-box" onclick="clickSpeedBox()"></div>
+                            </div>
+                            <p id="speedCounter" class="game-message"></p>
+                            <p id="speedTimer" class="attempts"></p>
+                            <button onclick="startSpeedGame()" class="game-button" id="speedStartBtn">Start Game</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -154,6 +154,156 @@ body {
     color: #555;
 }
 
+/* Games Section */
+.games {
+    padding: 80px 0;
+}
+
+.games h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.game-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#guessInput {
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#guessInput:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+.game-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.game-button:hover {
+    background-color: #2980b9;
+}
+
+.game-button.secondary {
+    background-color: #95a5a6;
+}
+
+.game-button.secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.game-message {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.game-message.correct {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.game-message.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.game-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.attempts {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Memory Game Board */
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    font-weight: bold;
+    color: white;
+}
+
+.memory-card:hover:not(.matched) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.memory-card.flipped {
+    background-color: #2ecc71;
+}
+
+.memory-card.matched {
+    background-color: #27ae60;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
 /* Contact Section */
 .contact {
     padding: 80px 0;
@@ -216,8 +366,12 @@ footer {
     }
 
     .about h2,
-    .services h2,
+    .games h2,
     .contact h2 {
         font-size: 2rem;
+    }
+
+    .memory-board {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

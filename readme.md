@@ -1,1 +1,1 @@
-Purpose of this project was to make alone my own basic website.
+Purpose of this project was to make my own website.

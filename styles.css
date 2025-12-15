@@ -67,6 +67,23 @@ body {
     justify-content: center;
 }
 
+.hero-logo {
+    margin-bottom: 2rem;
+}
+
+.logo-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+}
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;

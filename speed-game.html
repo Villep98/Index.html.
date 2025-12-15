@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Match Game - Peliluola</title>
+    <title>Speed Click Game - Peliluola</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,17 +25,20 @@
     <main>
         <section class="games">
             <div class="container">
-                <h1>Memory Match Game</h1>
+                <h1>Speed Click Game</h1>
 
-                <!-- Memory Match Game -->
+                <!-- Speed Click Game -->
                 <div class="game-container">
                     <div class="game-card">
-                        <h3>Memory Match Game</h3>
-                        <p>Match pairs of cards</p>
+                        <h3>Speed Click Game</h3>
+                        <p>Click 10 boxes as fast as you can!</p>
                         <div class="game-content">
-                            <div id="memoryBoard" class="memory-board"></div>
-                            <p id="matchMessage" class="game-message"></p>
-                            <button onclick="resetMemoryGame()" class="game-button">New Game</button>
+                            <div id="speedGameArea" class="speed-game-area">
+                                <div id="speedClickBox" class="speed-click-box" onclick="clickSpeedBox()"></div>
+                            </div>
+                            <p id="speedCounter" class="game-message"></p>
+                            <p id="speedTimer" class="attempts"></p>
+                            <button onclick="startSpeedGame()" class="game-button" id="speedStartBtn">Start Game</button>
                         </div>
                     </div>
                 </div>

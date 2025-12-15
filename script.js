@@ -164,6 +164,73 @@ function resetMemoryGame() {
     initMemoryGame();
 }
 
+// ===== SPEED CLICK GAME =====
+let speedClicks = 0;
+let speedGameActive = false;
+let speedGameStartTime = 0;
+let speedGameTimer = null;
+
+function startSpeedGame() {
+    speedClicks = 0;
+    speedGameActive = true;
+    speedGameStartTime = Date.now();
+
+    document.getElementById('speedCounter').textContent = 'Clicks: 0/10';
+    document.getElementById('speedCounter').className = 'game-message info';
+    document.getElementById('speedTimer').textContent = '';
+    document.getElementById('speedStartBtn').disabled = true;
+
+    moveSpeedBox();
+
+    // Update timer every 10ms
+    speedGameTimer = setInterval(() => {
+        const elapsed = ((Date.now() - speedGameStartTime) / 1000).toFixed(2);
+        document.getElementById('speedTimer').textContent = `Time: ${elapsed}s`;
+    }, 10);
+}
+
+function moveSpeedBox() {
+    if (!speedGameActive) return;
+
+    const gameArea = document.getElementById('speedGameArea');
+    const box = document.getElementById('speedClickBox');
+    const maxX = gameArea.clientWidth - 80;
+    const maxY = gameArea.clientHeight - 80;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    box.style.left = randomX + 'px';
+    box.style.top = randomY + 'px';
+    box.classList.add('active');
+}
+
+function clickSpeedBox() {
+    if (!speedGameActive) return;
+
+    speedClicks++;
+    document.getElementById('speedCounter').textContent = `Clicks: ${speedClicks}/10`;
+
+    if (speedClicks >= 10) {
+        endSpeedGame();
+    } else {
+        moveSpeedBox();
+    }
+}
+
+function endSpeedGame() {
+    speedGameActive = false;
+    clearInterval(speedGameTimer);
+
+    const elapsed = ((Date.now() - speedGameStartTime) / 1000).toFixed(2);
+    const box = document.getElementById('speedClickBox');
+    box.classList.remove('active');
+
+    document.getElementById('speedCounter').textContent = `🎉 Finished in ${elapsed} seconds!`;
+    document.getElementById('speedCounter').className = 'game-message correct';
+    document.getElementById('speedStartBtn').disabled = false;
+}
+
 // Initialize memory game on page load
 document.addEventListener('DOMContentLoaded', function () {
     initMemoryGame();

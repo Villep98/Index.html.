@@ -367,9 +367,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #f44336;
-}   margin-bottom: 3rem;
-    color: #01579b;
-}
+}   
 
 .contact-form {
     max-width: 600px;
@@ -392,7 +390,6 @@ body {
     outline: none;
     border-color: #f44336;
     box-shadow: 0 0 5px rgba(244, 67, 54, 0.3);
-}   box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
 }
 /* Footer */
 footer {
@@ -401,8 +398,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
-}   margin-top: 2rem;
-}
+}   
 
 /* Responsive Design */
 @media (max-width: 768px) {

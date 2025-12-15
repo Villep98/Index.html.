@@ -117,20 +117,20 @@ body {
     background-color: #1a1a1a;
     text-align: center;
 }
-}
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #f44336;
-}   color: #01579b;
 }
+
 .about p {
     font-size: 1.1rem;
     color: #ffffff;
     max-width: 600px;
     margin: 0 auto;
-}   margin: 0 auto;
 }
+
 
 /* Services Section */
 .services {
@@ -141,8 +141,8 @@ body {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #f44336;
-}   color: #01579b;
 }
+
 
 .service-grid {
     display: grid;
@@ -166,8 +166,8 @@ body {
     color: #f44336;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-}   font-size: 1.5rem;
 }
+
 
 .service-card p {
     color: #555;
@@ -182,8 +182,8 @@ body {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #f44336;
-}   color: #01579b;
 }
+
 
 .game-container {
     display: grid;
@@ -206,8 +206,8 @@ body {
     color: #f44336;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-}   font-size: 1.5rem;
 }
+
 
 .game-card p {
     color: #666;
@@ -245,7 +245,6 @@ body {
 
 .game-button:hover {
     background-color: #d32f2f;
-}   background-color: #1565c0;
 }
 
 .game-button.secondary {
@@ -315,7 +314,7 @@ body {
 .memory-card.flipped {
     background-color: #ffebee;
     color: #b71c1c;
-}   background-color: #81d4fa;
+}
 .memory-card.matched {
     background-color: #d32f2f;
     cursor: not-allowed;
